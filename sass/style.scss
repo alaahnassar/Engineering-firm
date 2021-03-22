@@ -1,0 +1,472 @@
+// * {
+//     color: #4C70E0;
+//     color: #E07458;
+//     color: #36E0AB;
+//     color: #E0AF2B;
+// }
+@import'custom_variables';
+@import'./bs4/bootstrap.scss';
+@import'babyBlue';
+@import'lightGreen';
+@import'lightYellow';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(136, 136, 136, 0.521);
+    display: none;
+    z-index: 999999;
+    &.show {
+        display: block;
+    }
+}
+
+h1,
+h5 {
+    font-family: 'Oswald';
+}
+
+h3,
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans';
+}
+
+button {
+    font-family: 'Roboto Condensed';
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+ul {
+    li {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+}
+
+.change-color {
+    & [data-color="babyBlue"] {
+        background-color: #4C70E0;
+    }
+    & [data-color="lightOrange"] {
+        background-color: #E07458;
+    }
+    & [data-color="lightGreen"] {
+        background-color: #36E0AB;
+    }
+    & [data-color="lightYellow"] {
+        background-color: #E0AF2B;
+    }
+}
+
+.home-page {
+    & {
+        position: relative;
+    }
+    .sidebar {
+        & {
+            position: absolute;
+            width: 250px;
+            animation: show .4s forwards;
+            height: 100%;
+            z-index: 999999;
+        }
+        a {
+            display: block;
+            color: black;
+            font-size: 22px;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+    .no-sidebar {
+        animation: hide .6s forwards;
+    }
+    header {
+        width: 100%;
+        .fa {
+            font-size: 27px;
+            padding-top: 4px;
+            z-index: 9999999;
+            position: relative;
+        }
+    }
+    .home-area {
+        width: 100%;
+        padding: 75px 0;
+        div {
+            h5 {
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+            @media (min-width: 700px) {
+                h1 {
+                    font-size: 68px;
+                }
+            }
+            h1 {
+                font-weight: 700;
+                line-height: 1.1;
+            }
+            p {
+                font-style: italic;
+                line-height: 1.6;
+            }
+            button {
+                padding: 8px 24px;
+                font-size: 18px;
+                border: 1px solid transparent;
+            }
+        }
+        .feauters {
+            h2 {
+                text-transform: uppercase;
+                font-size: 30px;
+                margin: 10px 0;
+                letter-spacing: 2px;
+            }
+            i {
+                border: 20px solid white;
+                border-radius: 50%;
+                font-size: 35px;
+                width: 75px;
+                height: 75px;
+            }
+            button {
+                padding: 6px 30px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+//=====Start of team page=======
+.team-page {
+    padding-bottom: 70px;
+    @media (min-width: 700px) {
+        h1 {
+            font-size: 93px;
+        }
+    }
+    h1 {
+        letter-spacing: 2px;
+        font-weight: 400;
+        span {
+            font-weight: 700;
+        }
+    }
+    p {
+        max-width: 745px;
+    }
+    .team {
+        height: 570px;
+        width: 85vw;
+        bottom: 0;
+        z-index: -1;
+    }
+    img {
+        max-width: 350px;
+        max-height: 350px;
+        margin-bottom: 25px;
+    }
+    @media(min-width:768px) {
+        .team {
+            bottom: 0;
+            height: 300px;
+            z-index: -1;
+        }
+    }
+}
+
+//====== Start of about=====
+.about {
+    h3 {
+        font-weight: 900;
+        font-size: 30px;
+    }
+    @media (min-width: 700px) {
+        h2 {
+            font-size: 60px;
+        }
+    }
+    h2 {
+        font-weight: 900;
+        line-height: 1;
+        font-family: Oswald, sans-serif;
+    }
+    .border {
+        width: 9vw;
+        height: 10px;
+    }
+    p {
+        line-height: 1.6;
+    }
+    .p {
+        font-style: italic;
+        font-size: 24px;
+        color: #808080;
+        line-height: 1.6;
+    }
+    button {
+        letter-spacing: 3px;
+        border: transparent;
+    }
+}
+
+//====== End of about=======
+//====== Start of work=====
+.work {
+    // & {}
+    p {
+        font-style: italic;
+        max-width: 793px;
+        line-height: 1.6;
+    }
+    img {
+        max-width: 350px;
+        max-height: 350px;
+    }
+    .img {
+        img {
+            max-width: 720px;
+            max-height: 716px;
+        }
+    }
+    .WorkOverlay {
+        height: 350px;
+        width: 79vw;
+        z-index: -1;
+        top: 36%;
+        right: 0;
+    }
+}
+
+//====== End of work=====
+//======Srart of Build=====
+.build {
+    position: relative;
+    .backgrounds {
+        .background1 {
+            & {
+                height: 65vh;
+            }
+            .imgs {
+                & {
+                    left: 10vw;
+                    position: absolute;
+                }
+                .img1 {
+                    & {
+                        position: absolute;
+                        z-index: 1;
+                        left: 6vw;
+                        top: 35vh;
+                    }
+                    img {
+                        width: 682px;
+                        height: 500px;
+                    }
+                }
+                .img2 {
+                    & {
+                        position: absolute;
+                        left: 11vw;
+                        z-index: 11;
+                        top: 9vh;
+                    }
+                    img {
+                        width: 970px;
+                        height: 630px;
+                    }
+                }
+            }
+        }
+        .background2 {
+            & {
+                height: 45vh;
+            }
+            .box {
+                position: absolute;
+                min-height: 363px;
+                width: 621px;
+                box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
+                bottom: 6vh;
+                right: 12vw;
+                z-index: 111;
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+                p {
+                    line-height: 1.6;
+                }
+                button {
+                    letter-spacing: 3px;
+                    border: transparent;
+                }
+            }
+        }
+    }
+}
+
+//======End of Build=====
+//======Srart of pragraph =====
+.praghrape {
+    p {
+        max-width: 650px;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin: 0 auto;
+        font-weight: 300;
+    }
+    button {
+        letter-spacing: 3px;
+        border: transparent;
+    }
+}
+
+//======End of pragraph===========
+// ======Srart of Vision==========
+.Vision {
+    height: 1050px;
+    .part1 {
+        .title {
+            max-width: 570px;
+            h1 {
+                line-height: 1.2;
+                font-size: 3.75rem;
+                font-weight: 700;
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+        }
+        .image1 {
+            img {
+                width: 494px;
+                height: 397px;
+            }
+        }
+    }
+    .part2 {
+        top: 385px;
+        .image2 {
+            img {
+                max-width: 819px;
+                max-height: 514px;
+            }
+        }
+        .box {
+            right: -261px;
+            top: 315px;
+            max-width: 480px;
+            max-height: 300px;
+            h2 {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 3rem;
+                line-height: 1.3;
+            }
+            button {
+                border: 1px solid transparent;
+                letter-spacing: 4px;
+            }
+        }
+    }
+}
+
+// ========End of Vision========== 
+//=========Srart of End=========
+.End {
+    z-index: -222;
+    .head {
+        h2 {
+            font-size: 4.5rem;
+            font-family: Oswald, sans-serif !important;
+        }
+        h5 {
+            font-size: 1.125rem;
+            font-weight: 400;
+            font-family: Roboto, sans-serif;
+        }
+    }
+    .container {
+        .card {
+            & {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .left {
+                i {
+                    border: 10px solid transparent;
+                    border-radius: 50%;
+                }
+                p {
+                    font-weight: 700;
+                    line-height: 1.6;
+                }
+            }
+            .right {
+                .input {
+                    display: block;
+                    width: 90%;
+                    border: 2px solid #b3b3b3;
+                }
+                button {
+                    border: 1px solid transparent;
+                    letter-spacing: 2px;
+                    font-family: inherit
+                }
+            }
+        }
+        .EndOverlay {
+            height: 75%;
+            width: 86%;
+            z-index: -11111;
+            top: 37px;
+            left: 7%;
+        }
+    }
+    .social {
+        i {
+            font-size: 27px;
+        }
+    }
+}
+
+//========= End of End=========
+@import '_mediaQuery';
+// ========== animations ====
+@keyframes show {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
